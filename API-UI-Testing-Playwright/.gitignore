@@ -1,7 +1,0 @@
-node_modules/
-playwright-report/
-test-results/
-blob-report/
-.env
-playwright/.auth/*
-!playwright/.auth/.gitkeep
