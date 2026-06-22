@@ -1,0 +1,24 @@
+{
+  "name": "playwright-dynamic-loading",
+  "version": "1.0.0",
+  "description": "Playwright project to test loading spinner behavior on the-internet.herokuapp.com dynamic loading examples.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:chrome": "npx playwright test --project=\"Google Chrome\"",
+    "test:headed": "npx playwright test --project=\"Google Chrome\" --headed",
+    "test:ui": "npx playwright test --ui",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "spinner",
+    "dynamic-loading",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "latest"
+  }
+}
