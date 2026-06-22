@@ -1,4 +1,3 @@
 {
-  "baseURL": "https://practice.expandtesting.com",
-  "dynamicLoadingPath": "/dynamic-loading/1"
+  "baseURL": "file://__PROJECT_ROOT__/apps/spinner-demo/index.html"
 }

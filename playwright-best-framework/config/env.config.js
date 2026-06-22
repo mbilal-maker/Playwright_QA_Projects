@@ -1,21 +1,11 @@
-require('dotenv').config();
-const qa = require('../data/env/qa.json');
-const staging = require('../data/env/staging.json');
+const path = require('path');
 
 function getEnvConfig() {
-  const envName = process.env.ENV || 'qa';
-  const configs = { qa, staging };
-  const selectedConfig = configs[envName];
-
-  if (!selectedConfig) {
-    throw new Error(`Invalid ENV value: ${envName}. Supported values: ${Object.keys(configs).join(', ')}`);
-  }
-
-  return {
-    ...selectedConfig,
-    envName,
-    headless: process.env.HEADLESS === 'true'
-  };
+  const env = process.env.TEST_ENV || 'qa';
+  const configPath = path.resolve(__dirname, `../data/env/${env}.json`);
+  const config = require(configPath);
+  config.baseURL = config.baseURL.replace('__PROJECT_ROOT__', path.resolve(__dirname, '..').replace(/\\/g, '/'));
+  return config;
 }
 
 module.exports = { getEnvConfig };

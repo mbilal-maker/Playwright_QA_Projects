@@ -1,4 +1,3 @@
 {
-  "baseURL": "https://practice.expandtesting.com",
-  "dynamicLoadingPath": "/dynamic-loading/1"
+  "baseURL": "https://practice.expandtesting.com/dynamic-loading/1"
 }

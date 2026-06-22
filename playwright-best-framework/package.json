@@ -1,31 +1,16 @@
 {
-  "name": "playwright-best-framework-example",
+  "name": "playwright-best-framework-v3",
   "version": "1.0.0",
-  "description": "Scalable Playwright framework example with POM, fixtures, Page Object Manager, environment config, test data, and documentation.",
+  "description": "Scalable Playwright framework example for spinner handling",
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
     "test:chrome": "playwright test --project=chrome",
     "test:headed": "playwright test --project=chrome --headed",
     "test:ui": "playwright test --ui",
-    "test:debug": "playwright test --debug",
-    "report": "playwright show-report",
-    "lint": "eslint .",
-    "format": "prettier --write ."
+    "report": "playwright show-report"
   },
-  "keywords": [
-    "playwright",
-    "automation",
-    "qa",
-    "pom",
-    "fixtures"
-  ],
-  "author": "QA Framework Example",
-  "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "latest",
-    "dotenv": "latest",
-    "eslint": "latest",
-    "prettier": "latest"
+    "@playwright/test": "^1.61.0"
   }
 }

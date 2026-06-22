@@ -5,7 +5,7 @@ test.describe('Dynamic Loading Spinner - Framework Example', () => {
   test('Validate loader spinner disappears and final result is displayed', async ({ poManager }) => {
     const dynamicLoadingPage = poManager.getDynamicLoadingPage();
 
-    await dynamicLoadingPage.openDynamicLoadingExample(1);
+    await dynamicLoadingPage.openSpinnerDemo();
     await dynamicLoadingPage.verifyPageLoaded();
     await dynamicLoadingPage.clickStart();
     await dynamicLoadingPage.waitForSpinnerVisible();

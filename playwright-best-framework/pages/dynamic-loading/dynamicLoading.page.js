@@ -5,18 +5,17 @@ const { AssertionHelper } = require('../../utils/assertion.helper');
 class DynamicLoadingPage extends BasePage {
   constructor(page) {
     super(page);
-    this.heading = page.getByRole('heading', { name: 'Dynamically Loaded Page Elements' });
-    this.startButton = page.getByRole('button', { name: 'Start' });
-    this.loadingSpinner = page.locator('#loading');
-    this.resultText = page.locator('#finish');
+    this.startButton = page.getByTestId('start-button');
+    this.loadingSpinner = page.getByTestId('loading-spinner');
+    this.resultText = page.getByTestId('final-result');
   }
 
-  async openDynamicLoadingExample(exampleNumber = 1) {
-    await this.open(`/dynamic-loading/${exampleNumber}`);
+  async openSpinnerDemo() {
+    await this.open('');
   }
 
   async verifyPageLoaded() {
-    await AssertionHelper.expectVisible(this.heading);
+    await AssertionHelper.expectVisible(this.startButton);
   }
 
   async clickStart() {
@@ -32,6 +31,7 @@ class DynamicLoadingPage extends BasePage {
   }
 
   async verifyResultText(expectedText) {
+    await AssertionHelper.expectVisible(this.resultText);
     await AssertionHelper.expectText(this.resultText, expectedText);
   }
 }
