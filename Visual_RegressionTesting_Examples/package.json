@@ -1,0 +1,21 @@
+{
+  "name": "playwright-saucedemo-chrome-visual-regression",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Working Playwright visual regression suite for SauceDemo using installed Google Chrome on Windows.",
+  "scripts": {
+    "test": "node scripts/run-visual-tests.js",
+    "test:compare": "playwright test",
+    "test:update": "playwright test --update-snapshots",
+    "test:desktop": "node scripts/run-visual-tests.js --project=desktop-chrome",
+    "test:mobile": "node scripts/run-visual-tests.js --project=mobile-chrome",
+    "test:debug": "playwright test --debug --project=desktop-chrome",
+    "test:ui": "playwright test --ui --project=desktop-chrome",
+    "list": "playwright test --list",
+    "report": "playwright show-report",
+    "reset": "node scripts/reset-baselines.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.0"
+  }
+}

@@ -1,0 +1,26 @@
+PLAYWRIGHT VISUAL REGRESSION - GOOGLE CHROME / WINDOWS
+
+FASTEST METHOD
+1. Extract this ZIP.
+2. Double-click: setup-and-run.cmd
+
+POWERSHELL METHOD
+1. Open PowerShell inside the extracted folder.
+2. Run:
+
+   npm install
+   npm test
+
+IMPORTANT
+- npm test automatically creates missing baseline screenshots on the first run.
+- The same command immediately reruns the suite and compares against them.
+- Future npm test runs perform comparison only.
+- Google Chrome must already be installed on the laptop.
+- Do NOT run: npx playwright install chromium
+
+TARGET
+https://www.saucedemo.com
+
+CREDENTIALS USED BY TESTS
+standard_user / secret_sauce
+locked_out_user / secret_sauce
