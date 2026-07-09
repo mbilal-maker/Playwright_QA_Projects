@@ -1,0 +1,14 @@
+{
+  "name": "playwright-all-actions-example",
+  "version": "1.0.0",
+  "description": "Working Playwright examples covering common UI, keyboard, mouse, file, dialog, popup, network, API, screenshot, and mobile tap actions.",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest"
+  }
+}
