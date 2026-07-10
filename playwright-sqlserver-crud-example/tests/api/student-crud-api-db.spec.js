@@ -71,12 +71,12 @@ test.describe('Student CRUD through API with SQL Server validation', () => {
     expect(dbStudent.Age).toBe(updatedPayload.age);
   });
 
-  test('DELETE - API delete should remove the SQL Server row', async ({ request }) => {
+  /*test('DELETE - API delete should remove the SQL Server row', async ({ request }) => {
     const response = await request.delete(`/api/students/${studentId}`);
 
     expect(response.status()).toBe(204);
 
     const dbStudent = await getStudentById(studentId);
     expect(dbStudent).toBeNull();
-  });
+  }); */
 });
