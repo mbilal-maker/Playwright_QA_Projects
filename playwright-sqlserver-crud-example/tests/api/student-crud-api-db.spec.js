@@ -8,9 +8,9 @@ test.describe('Student CRUD through API with SQL Server validation', () => {
   const email = `api.student.${Date.now()}@example.com`;
   let studentId;
 
-  test.afterAll(async () => {
+  /*test.afterAll(async () => {
     await deleteStudentByEmail(email);
-  });
+  }); */
 
   test('CREATE - API response and database row should match', async ({ request }) => {
     const payload = {
