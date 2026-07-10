@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student CRUD - Playwright DB Learning</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Student Registration</h1>
+      <p>Create or update a student. The data is stored in SQL Server.</p>
+
+      <form id="student-form">
+        <input type="hidden" id="student-id" />
+
+        <label>
+          Name
+          <input id="name" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input id="email" name="email" type="email" required />
+        </label>
+
+        <label>
+          Course
+          <input id="course" name="course" required />
+        </label>
+
+        <label>
+          Age
+          <input id="age" name="age" type="number" min="1" max="120" required />
+        </label>
+
+        <div class="actions">
+          <button id="save-button" type="submit">Create Student</button>
+          <button id="cancel-button" type="button" class="secondary" hidden>Cancel Edit</button>
+        </div>
+      </form>
+
+      <div id="message" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <div class="heading-row">
+        <h2>Students</h2>
+        <button id="refresh-button" class="secondary">Refresh</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Age</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="students-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
